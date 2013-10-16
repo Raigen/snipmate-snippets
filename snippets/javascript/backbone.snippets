@@ -1,0 +1,8 @@
+snippet model
+    var ${1:Model} = Backbone.Model.extend(${2});
+
+snippet coll
+    var ${1:Collection} = Backbone.Collection.extend({
+        model: ${2:Model},
+        url: '${3}'
+    });

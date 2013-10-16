@@ -1,0 +1,52 @@
+snippet any
+    jasmine.any(${1})
+
+snippet aft
+    afterEach(function () {
+        ${1}
+    });
+
+snippet bef
+    beforeEach(function () {
+        ${1}
+    });
+
+snippet des
+    describe('${1:description}', function () {
+        ${2}
+    });
+
+snippet it
+    it('${1:description}', function () {
+        ${2}
+    });
+
+snippet runs
+    runs(function () {
+        ${1}
+    });
+
+snippet waits
+    waitsFor(function () {
+        ${3}
+    }, ${1:description}, ${2:timeout});${4}
+
+# expect
+snippet ex
+    expect(${1:target}).to${2}(${3:value});${4}
+
+snippet exn
+    expect(${1:target}).not.to${2}(${3:value});${4}
+
+snippet ee
+    expect(${1:target}).toEqual(${2:value});${3}
+
+snippet ec
+    expect(${1:target}).toContain(${2:value});${3}
+
+# spys
+snippet jspy
+    spyOn(${1:object}, '${2:method}');${3}
+
+snippet jspyr
+    spyOn(${1:object}, '${2:method}').andReturn(${3:arguments});${4}
