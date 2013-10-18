@@ -1,4 +1,4 @@
-snippet model
+snippet mod
     var ${1:Model} = Backbone.Model.extend(${2});
 
 snippet coll
@@ -6,3 +6,23 @@ snippet coll
         model: ${2:Model},
         url: '${3}'
     });
+
+snippet init
+    initialize: function () {
+        ${1:// body...}
+    }
+
+snippet serd
+    serializedata: function () {
+        var data = {${1}};
+        return data;
+    }
+
+snippet serdm
+    serializedata: function () {
+        var data = this.model.tojson();${1}
+        return data;
+    }
+
+snippet listen
+    this.listenTo(${1:vent}, '${2}', ${3});${4}
