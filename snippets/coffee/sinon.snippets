@@ -1,0 +1,22 @@
+snippet fserver
+    @server = sinon.fakeServer.create
+
+snippet fsrw
+    @server.respondWith '${1:POST}', '${2:path}', [${3:200},
+        'Content-Type': '${4:text/html}'
+    , '${5:response}']
+
+snippet resp
+    @server.respond
+
+snippet rest
+    @server.restore
+
+snippet sstub
+    sinon.stub ${1}
+
+snippet sspy
+    sinon.spy ${1}
+
+snippet sstubr
+    sinon.stub(${1}).returns ${2:true}

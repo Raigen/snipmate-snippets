@@ -1,0 +1,23 @@
+snippet mod
+    ${1:Model} = Backbone.Model.extend
+        ${2}
+
+snippet coll
+    ${1:Collection} = Backbone.Collection.extend
+        model: ${2:Model}
+        url: '${3}'
+
+snippet ini
+    initialize: ->
+        ${1:# body...}
+
+snippet serd
+    serializedata: ->
+        data = ${1}
+
+snippet serdm
+    serializedata: ->
+        data = @model.tojson()
+
+snippet listen
+    this.listenTo ${1:vent}, '${2:event}', ${3}

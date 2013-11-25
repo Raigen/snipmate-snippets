@@ -1,0 +1,47 @@
+snippet any
+    jasmine.any ${1}
+
+snippet aft
+    afterEach ->
+        ${1}
+
+snippet bef
+    beforeEach ->
+        ${1}
+
+snippet des
+    describe '${1:description}', ->
+        ${2}
+
+snippet it
+    it '${1:description}', ->
+        ${2}
+
+snippet runs
+    runs ->
+        ${1}
+
+snippet waits
+    waitsFor ->
+        ${3:true}
+    , '${1:description}', ${2:timeout}
+
+# expect
+snippet ex
+    (expect ${1:target}).to${2} ${3:value}
+
+snippet exn
+    (expect ${1:target}).not.to${2} ${3:value}
+
+snippet ee
+    (expect ${1:target}).toEqual ${2:value}
+
+snippet ec
+    (expect ${1:target}).toContain ${2:value}
+
+# spys
+snippet jspy
+    spyOn ${1:object}, '${2:method}'
+
+snippet jspyr
+    spyOn(${1:object}, '${2:method}').andReturn ${3:arguments}

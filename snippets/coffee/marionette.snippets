@@ -1,0 +1,20 @@
+snippet itemv
+    Marionette.ItemView.extend
+        tagName: '${1:div}'
+        template: ${2:template}
+
+snippet comv
+    Marionette.CompositeView.extend
+        template: ${1:template}
+        itemView: ${2:ItemView}
+        itemViewContainer: '${3:ul}'
+
+snippet colv
+    Marionette.CollectionView.extend
+        itemView: ${1:itemView}
+
+snippet layout
+    Marionette.Layout.extend
+        template: ${1:template}
+        regions:
+            ${2}
